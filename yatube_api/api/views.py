@@ -8,7 +8,6 @@ from rest_framework.filters import SearchFilter
 from posts.models import Group, Post, Comment
 from .serializers import (GroupSerializer, PostSerializer,
                           CommentSerializer, FollowSerializer)
-
 from .permissions import AuthorOrReadOnly
 
 
@@ -31,7 +30,6 @@ class PostViewSet(viewsets.ModelViewSet):
 
 
 class CommentViewSet(viewsets.ModelViewSet):
-    queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     permission_classes = (AuthorOrReadOnly,)
 

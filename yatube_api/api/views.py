@@ -5,7 +5,7 @@ from rest_framework.pagination import LimitOffsetPagination
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
 
-from posts.models import Group, Post, Comment
+from posts.models import Group, Post
 from .serializers import (GroupSerializer, PostSerializer,
                           CommentSerializer, FollowSerializer)
 from .permissions import AuthorOrReadOnly
